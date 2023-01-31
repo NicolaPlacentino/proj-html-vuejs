@@ -7,12 +7,13 @@ export default {
     },
     props: {
         text: String
-    }
+    },
+    emits: ['button-clicked']
 }
 </script>
 
 <template>
-    <button>{{ text }}</button>
+    <button @click="$emit('button-clicked')">{{ text }}</button>
 </template>
 
 <style lang="scss" scoped>

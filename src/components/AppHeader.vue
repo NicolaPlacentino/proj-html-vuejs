@@ -11,39 +11,47 @@ export default {
                 leftMenu: [
                     {
                         text: 'home',
-                        svg: '/src/assets/svg/svg-0.svg'
+                        svg: '/src/assets/svg/svg-0.svg',
+                        url: '#'
                     },
                     {
                         text: 'pages',
-                        svg: ''
+                        svg: '',
+                        url: '#'
                     },
                     {
                         text: 'menu',
-                        svg: ''
+                        svg: '',
+                        url: '#'
                     }
                 ],
                 rightMenu: [
                     {
                         text: 'menu',
-                        svg: ''
+                        svg: '',
+                        url: '#'
                     },
                     {
                         text: 'event',
-                        svg: ''
+                        svg: '',
+                        url: '#'
                     },
                     {
                         text: 'blog',
-                        svg: ''
+                        svg: '',
+                        url: '#'
                     }
                 ],
                 tools: [
                     {
                         text: 'cart',
-                        svg: '/src/assets/svg/svg-1.svg'
+                        svg: '/src/assets/svg/svg-1.svg',
+                        url: '#'
                     },
                     {
                         text: 'search',
-                        svg: ''
+                        svg: '',
+                        url: '#'
                     }
                 ],
                 logo: '/src/assets/img/h5-logo-divided-header.png'
@@ -59,30 +67,36 @@ export default {
 <template>
     <div class="bg">
         <div class="container">
-            <nav class="p-3 d-flex">
+            <nav class="p-4 d-flex">
                 <BaseButton :text="this.buttonText"></BaseButton>
-                <div class="center-nav">
-                    <ul>
+                <div class="center-content">
+                    <ul class="center-content">
                         <li v-for="element in this.navElements.leftMenu">
-                            <img v-if="element.svg" :src="element.svg" class="img-fluid filtered">
-                            {{ element.text }}
+                            <a :href="element.url">
+                                <img v-if="element.svg" :src="element.svg" class="img-fluid filtered">
+                                {{ element.text }}
+                            </a>
                         </li>
                     </ul>
                     <figure>
                         <img :src="this.navElements.logo" alt="Don Peppe" class="img-fluid">
                     </figure>
-                    <ul>
+                    <ul class="center-content">
                         <li v-for="element in this.navElements.rightMenu">
-                            <img v-if="element.svg" :src="element.svg" class="img-fluid">
-                            {{ element.text }}
+                            <a :href="element.url">
+                                <img v-if="element.svg" :src="element.svg" class="img-fluid filtered">
+                                {{ element.text }}
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div class="tools">
-                    <ul>
+                    <ul class="center-content">
                         <li v-for="element in this.navElements.tools">
-                            <img v-if="element.svg" :src="element.svg" class="img-fluid filtered">
-                            {{ element.text }}
+                            <a :href="element.url">
+                                <img v-if="element.svg" :src="element.svg" class="img-fluid filtered">
+                                {{ element.text }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -92,5 +106,54 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+div {
+    text-transform: uppercase;
 
+    color: white;
+
+    &.bg {
+        background-image: url('../assets/img/cielostellato.PNG');
+        width: 100%;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    nav {
+        justify-content: space-around;
+        align-items: center;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 0 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        figure {
+            width: 200px;
+            height: auto;
+            margin: 0 10px;
+        }
+    }
+
+    .filtered {
+        filter: invert(1);
+        width: 25px;
+        height: auto;
+    }
+}
 </style>
