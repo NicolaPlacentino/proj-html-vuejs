@@ -15,8 +15,10 @@ export default {
 
 <template>
     <BaseCarousel :background-pattern="true" :carousel-content="store.carouselPizzas"></BaseCarousel>
-    <div>
-
+    <div class="d-flex">
+        <figure v-for="img in store.topImages" class="w-25 px-1 py-2">
+            <img :src="img" :alt="'stock image'" class="img-fluid">
+        </figure>
     </div>
     <BaseCarousel :background-pattern="false" :carousel-content="store.carouselTestimonials"></BaseCarousel>
 

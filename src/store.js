@@ -26,5 +26,12 @@ export const store = reactive({
             text: '"Mi piace davvero tanto questo posto"',
             testimonial: 'Giggino'
         },
+    ],
+    topImages: [
+        '/src/assets/img/h3-img-1.jpg',
+        '/src/assets/img/h3-img-2.jpg',
+        '/src/assets/img/h3-img-3.jpg',
+        '/src/assets/img/h3-img-4.jpg',
+
     ]
 })

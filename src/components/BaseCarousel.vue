@@ -67,7 +67,7 @@ export default {
     .prev,
     .next {
         position: absolute;
-        top: 35%;
+        top: 40%;
 
         z-index: 1;
 
