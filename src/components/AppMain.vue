@@ -14,11 +14,11 @@ export default {
 </script>
 
 <template>
-    <BaseCarousel></BaseCarousel>
+    <BaseCarousel :background-pattern="true" :carousel-content="store.carouselPizzas"></BaseCarousel>
     <div>
 
     </div>
-    <BaseCarousel></BaseCarousel>
+    <BaseCarousel :background-pattern="false" :carousel-content="store.carouselTestimonials"></BaseCarousel>
 
     <section class="specials">
 
