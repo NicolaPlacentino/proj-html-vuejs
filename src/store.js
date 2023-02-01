@@ -46,5 +46,5 @@ export const store = reactive({
         logoHeaderDark: '/src/assets/img/h5-logo-divided-header-dark.png',
         specialsLogo: '/src/assets/img/h1-img-7n.png'
     },
-    bgPattern: 'src/assets/img/cielostellato.png'
+    bgPattern: 'src/assets/img/cielostellato.png',
 })
