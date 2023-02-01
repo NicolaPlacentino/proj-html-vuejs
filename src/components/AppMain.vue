@@ -3,6 +3,7 @@ import { store } from '../store';
 import OrderingForm from './OrderingForm.vue';
 import BaseCarousel from './BaseCarousel.vue';
 import BaseInfoSection from './BaseInfoSection.vue';
+import BasePictureGallery from './BasePictureGallery.vue';
 export default {
     name: 'AppMain',
     data() {
@@ -54,17 +55,15 @@ export default {
             buildYourPizzaBg: '/src/assets/img/h3-background-img.jpg'
         }
     },
-    components: { BaseCarousel, OrderingForm, BaseInfoSection }
+    components: { BaseCarousel, OrderingForm, BaseInfoSection, BasePictureGallery }
 }
 </script>
 
 <template>
     <BaseCarousel :background-pattern="true" :carousel-content="store.carouselPizzas"></BaseCarousel>
-    <div class="d-flex">
-        <figure v-for="img in store.topImages" class="w-25 px-1 py-2">
-            <img :src="img" :alt="'stock image'" class="img-fluid">
-        </figure>
-    </div>
+
+    <BasePictureGallery :image-gallery="store.topImages" :padding-x="true"></BasePictureGallery>
+
     <BaseCarousel :background-pattern="false" :carousel-content="store.carouselTestimonials"></BaseCarousel>
 
     <!-- specials section -->
@@ -81,6 +80,9 @@ export default {
             </p>
         </div>
     </div>
+
+    <BasePictureGallery :image-gallery="store.teamImages"></BasePictureGallery>
+
     <section class="menu">
 
     </section>

@@ -47,4 +47,11 @@ export const store = reactive({
         specialsLogo: '/src/assets/img/h1-img-7n.png'
     },
     bgPattern: 'src/assets/img/cielostellato.png',
+    teamImages: [
+        '/src/assets/img/h1-team-1a-700x700.jpg',
+        '/src/assets/img/h1-team-2a.jpg',
+        '/src/assets/img/h1-team-3a.jpg',
+        '/src/assets/img/h1-team-4a.jpg',
+
+    ]
 })
