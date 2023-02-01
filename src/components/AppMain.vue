@@ -127,7 +127,7 @@ export default {
             }
         }
 
-        &:last-child {
+        &:nth-child(3) {
             height: 27.5%;
 
             img {
