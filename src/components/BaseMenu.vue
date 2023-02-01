@@ -9,29 +9,35 @@ export default {
     },
     props: {
         menuContent: Object
+    },
+    methods: {
+        sellPizza(product) {
+            product.sold = true
+        }
     }
 }
 </script>
 
 <template>
     <div class="menu-body">
-        <div class="menu-info text-center p-5">
+        <div class="menu-info text-center p-5 pb-0">
             <span class="surtitle">{{ menuContent.surtitle }}</span>
             <h2>{{ menuContent.title }}</h2>
             <p>{{ menuContent.description }}</p>
         </div>
-        <div class="menu-products p-5 d-flex">
+        <div class="menu-products p-5 d-flex text-uppercase">
             <div v-for="product in menuContent.products" class="product-card text-center">
-                <figure>
+                <figure class="position-relative" @click="sellPizza(product)">
                     <img :src="product.image" :alt="product.name">
-                    <div v-if="product.sold" class="text-uppercase">sold</div>
+                    <div v-if="product.sold" class="sold">sold</div>
                 </figure>
                 <h6>{{ product.name }}</h6>
                 <div v-if="!product.discountedPrice">
                     <span>{{ product.price }}</span>
                 </div>
                 <div v-else>
-                    <span class="old-price">{{ product.price }} {{ product.discountedPrice }}</span>
+                    <span class="old-price">{{ product.price }}</span>
+                    <span>{{ product.discountedPrice }}</span>
                 </div>
             </div>
         </div>
@@ -42,12 +48,76 @@ export default {
 @use '../assets/scss/variables' as*;
 
 .menu-body {
-    height: 600px;
+    margin-bottom: 30px;
 
-    .menu-info {}
+    .menu-info {
+        .surtitle {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+            color: $my-orange;
+        }
+
+        h2 {
+            text-transform: uppercase;
+        }
+
+        p {
+            color: gray;
+            font-size: 15px;
+        }
+    }
 
     .menu-products {
         justify-content: space-between;
+
+        .product-card {
+            width: 180px;
+
+            figure {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .sold {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    width: 45px;
+                    height: 45px;
+                    background-color: $my-orange;
+                    border-radius: 50%;
+
+                    color: white;
+                    font-size: 12px;
+                    font-weight: bold;
+
+                    text-align: center;
+                    line-height: 45px;
+                }
+            }
+
+            h6 {
+                color: $my-gold-l;
+            }
+
+            span {
+                color: $my-orange;
+                font-weight: bold;
+
+                &.old-price {
+                    display: inline-block;
+                    margin-right: 5px;
+
+                    color: $my-faint-beige;
+                    text-decoration: line-through;
+                }
+            }
+        }
     }
 }
 </style>
