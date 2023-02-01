@@ -18,7 +18,7 @@ export const store = reactive({
     carouselTestimonials: [
         {
             backgroundImg: '/src/assets/img/h3-testimonials-bckgrnd.jpg',
-            text: '"Forget the trendy pizza shops, this hidden spot makes the best New York style pizza slice in Naples"',
+            text: '"Forget the trendy pizza shops, this hidden spot makes the best New York style pizza slice in Neaples"',
             testimonial: 'Washington Post 2018'
         },
         {
@@ -45,5 +45,6 @@ export const store = reactive({
         logoHeaderLight: '/src/assets/img/h5-logo-divided-header.png',
         logoHeaderDark: '/src/assets/img/h5-logo-divided-header-dark.png',
         specialsLogo: '/src/assets/img/h1-img-7n.png'
-    }
+    },
+    bgPattern: 'src/assets/img/cielostellato.png'
 })
