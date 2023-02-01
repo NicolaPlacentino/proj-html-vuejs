@@ -33,5 +33,17 @@ export const store = reactive({
         '/src/assets/img/h3-img-3.jpg',
         '/src/assets/img/h3-img-4.jpg',
 
-    ]
+    ],
+    sideImages: {
+        specialsImage: '/src/assets/img/h1-img-4.jpg',
+        dealsImage: '/src/assets/img/h3-img-5a.jpg',
+        footerImage: '/src/assets/img/footer-img-1.jpg'
+    },
+    logos: {
+        plainLogo: '/src/assets/img/logo.png',
+        logoMobile: '/src/assets/img/mobile.png',
+        logoHeaderLight: '/src/assets/img/h5-logo-divided-header.png',
+        logoHeaderDark: '/src/assets/img/h5-logo-divided-header-dark.png',
+        specialsLogo: '/src/assets/img/h1-img-7n.png'
+    }
 })

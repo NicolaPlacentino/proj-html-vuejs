@@ -54,7 +54,7 @@ export default {
                         url: '#'
                     }
                 ],
-                logo: '/src/assets/img/h5-logo-divided-header.png'
+                logo: store.logos.logoHeaderLight
             }
 
         }
