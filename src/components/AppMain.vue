@@ -62,7 +62,7 @@ export default {
 <template>
     <BaseCarousel :background-pattern="true" :carousel-content="store.carouselPizzas"></BaseCarousel>
 
-    <BasePictureGallery :image-gallery="store.topImages" :padding-x="true"></BasePictureGallery>
+    <BasePictureGallery :content="store.stock"></BasePictureGallery>
 
     <BaseCarousel :background-pattern="false" :carousel-content="store.carouselTestimonials"></BaseCarousel>
 
@@ -81,7 +81,8 @@ export default {
         </div>
     </div>
 
-    <BasePictureGallery :image-gallery="store.teamImages"></BasePictureGallery>
+    <BasePictureGallery :content="store.teamMembers" :has-hover-info="true" :social="true">
+    </BasePictureGallery>
 
     <section class="menu">
 

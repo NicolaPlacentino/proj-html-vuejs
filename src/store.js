@@ -27,13 +27,6 @@ export const store = reactive({
             testimonial: 'Giggino'
         },
     ],
-    topImages: [
-        '/src/assets/img/h3-img-1.jpg',
-        '/src/assets/img/h3-img-2.jpg',
-        '/src/assets/img/h3-img-3.jpg',
-        '/src/assets/img/h3-img-4.jpg',
-
-    ],
     sideImages: {
         specialsImage: '/src/assets/img/h1-img-4.jpg',
         dealsImage: '/src/assets/img/h3-img-5a.jpg',
@@ -47,11 +40,49 @@ export const store = reactive({
         specialsLogo: '/src/assets/img/h1-img-7n.png'
     },
     bgPattern: 'src/assets/img/cielostellato.png',
-    teamImages: [
-        '/src/assets/img/h1-team-1a-700x700.jpg',
-        '/src/assets/img/h1-team-2a.jpg',
-        '/src/assets/img/h1-team-3a.jpg',
-        '/src/assets/img/h1-team-4a.jpg',
 
+    stock: [
+        {
+            mainInfo: '',
+            secondaryInfo: '',
+            image: '/src/assets/img/h3-img-1.jpg',
+        },
+        {
+            mainInfo: '',
+            secondaryInfo: '',
+            image: '/src/assets/img/h3-img-2.jpg',
+        },
+        {
+            mainInfo: '',
+            secondaryInfo: '',
+            image: '/src/assets/img/h3-img-3.jpg',
+        },
+        {
+            mainInfo: '',
+            secondaryInfo: '',
+            image: '/src/assets/img/h3-img-4.jpg',
+        },
+    ],
+    teamMembers: [
+        {
+            mainInfo: 'Frank Bailey',
+            secondaryInfo: 'Kitchen Porter',
+            image: '/src/assets/img/h1-team-1a-700x700.jpg',
+        },
+        {
+            mainInfo: 'Giovanna Day',
+            secondaryInfo: 'Manager',
+            image: '/src/assets/img/h1-team-2a.jpg',
+        },
+        {
+            mainInfo: 'Annah Jones',
+            secondaryInfo: 'Watches paint dry',
+            image: '/src/assets/img/h1-team-3a.jpg',
+        },
+        {
+            mainInfo: 'Pallo Pinco',
+            secondaryInfo: 'CEO',
+            image: '/src/assets/img/h1-team-4a.jpg',
+        },
     ]
 })
