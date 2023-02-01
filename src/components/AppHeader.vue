@@ -60,7 +60,11 @@ export default {
         }
     },
     components: { BaseButton },
-
+    methods: {
+        order() {
+            alert('Ordinato!')
+        }
+    }
 }
 </script>
 
@@ -68,7 +72,7 @@ export default {
     <div class="bg">
         <div class="container">
             <nav class="p-4 d-flex">
-                <BaseButton :text="this.buttonText"></BaseButton>
+                <BaseButton @button-clicked="order" :text="this.buttonText"></BaseButton>
                 <div class="center-content">
                     <ul class="center-content">
                         <li v-for="element in this.navElements.leftMenu">
