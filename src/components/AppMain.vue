@@ -4,6 +4,7 @@ import OrderingForm from './OrderingForm.vue';
 import BaseCarousel from './BaseCarousel.vue';
 import BaseInfoSection from './BaseInfoSection.vue';
 import BasePictureGallery from './BasePictureGallery.vue';
+import Clients from './Clients.vue';
 export default {
     name: 'AppMain',
     data() {
@@ -55,7 +56,7 @@ export default {
             buildYourPizzaBg: '/src/assets/img/h3-background-img.jpg'
         }
     },
-    components: { BaseCarousel, OrderingForm, BaseInfoSection, BasePictureGallery }
+    components: { BaseCarousel, OrderingForm, BaseInfoSection, BasePictureGallery, Clients }
 }
 </script>
 
@@ -83,6 +84,8 @@ export default {
 
     <BasePictureGallery :content="store.teamMembers" :has-hover-info="true" :social="true">
     </BasePictureGallery>
+
+    <Clients></Clients>
 
     <section class="menu">
 

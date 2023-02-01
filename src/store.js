@@ -84,5 +84,27 @@ export const store = reactive({
             secondaryInfo: 'CEO',
             image: '/src/assets/img/h1-team-4a.jpg',
         },
+    ],
+    clients: [
+        {
+            name: 'Big Cheese',
+            logo: 'src/assets/img/h1-clients-img-1.png'
+        },
+        {
+            name: 'Bludoos Bar',
+            logo: 'src/assets/img/h1-clients-img-2.png'
+        },
+        {
+            name: 'Gordon',
+            logo: 'src/assets/img/h1-clients-img-3.png'
+        },
+        {
+            name: 'Cowboy',
+            logo: 'src/assets/img/h1-clients-img-4.png'
+        },
+        {
+            name: 'Vegan',
+            logo: 'src/assets/img/h1-clients-img-5.png'
+        },
     ]
 })
