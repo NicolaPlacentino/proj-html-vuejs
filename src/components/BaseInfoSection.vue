@@ -15,57 +15,65 @@ export default {
         hasPattern: Boolean,
         hasSeparator: Boolean,
         mainContent: Object,
+        hasIcon: Boolean
     }
 }
 </script>
 
 <template>
-    <section class="d-flex">
-        <div v-if="imgSide === 'left'" class="w-50 position-relative">
-            <img :src="bgImg" :alt="bgImg" class="bg-img img-fluid">
-            <figure v-if="hasLogo" class="position-absolute m-0">
-                <img :src="logoImg" alt="Don Peppe" class="img-fluid">
-            </figure>
+    <div class="position-relative">
+        <!-- icon -->
+        <div v-if="hasIcon" class="icon position-absolute">
+            <img :src="store.icons.cart" class="w-50">
         </div>
-        <div class="w-50" :class="{ 'bg-pattern': hasPattern }">
-            <div class="w-75 mx-auto mt-5">
-                <span v-if="mainContent.surTitle" class="text-uppercase surtitle color-orange">{{
-                    mainContent.surTitle
-                }}</span>
-                <h2 class="text-uppercase">{{ mainContent.title }}</h2>
-                <span v-if="mainContent.subTitle" class="subtitle">{{ mainContent.subTitle }}</span>
 
-                <div v-for="listItem in mainContent.listItems">
-                    <div v-if="hasSeparator" class="separator"></div>
-                    <div class="d-flex">
-                        <div class="me-4">
-                            <div v-if="listItem.date" class="d-inline text-uppercase">
-                                <span class="d-block day color-orange">{{ listItem.date[0] }}</span>
-                                <span class="d-block month">{{ listItem.date[1] }}</span>
+        <section class="d-flex">
+            <div v-if="imgSide === 'left'" class="w-50 position-relative">
+                <img :src="bgImg" :alt="bgImg" class="bg-img img-fluid">
+                <figure v-if="hasLogo" class="position-absolute m-0">
+                    <img :src="logoImg" alt="Don Peppe" class="img-fluid">
+                </figure>
+            </div>
+            <div class="w-50" :class="{ 'bg-pattern': hasPattern }">
+                <div class="w-75 mx-auto mt-5">
+                    <span v-if="mainContent.surTitle" class="text-uppercase surtitle color-orange">{{
+                        mainContent.surTitle
+                    }}</span>
+                    <h2 class="text-uppercase">{{ mainContent.title }}</h2>
+                    <span v-if="mainContent.subTitle" class="subtitle">{{ mainContent.subTitle }}</span>
+
+                    <div v-for="listItem in mainContent.listItems">
+                        <div v-if="hasSeparator" class="separator"></div>
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <div v-if="listItem.date" class="d-inline text-uppercase">
+                                    <span class="d-block day color-orange">{{ listItem.date[0] }}</span>
+                                    <span class="d-block month">{{ listItem.date[1] }}</span>
+                                </div>
+                                <span v-else class="price">{{ listItem.price }}</span>
                             </div>
-                            <span v-else class="price">{{ listItem.price }}</span>
-                        </div>
-                        <div>
-                            <h3 class="text-uppercase">{{ listItem.name }}</h3>
-                            <p class="color-orange">
-                                <span v-if="mainContent.surTitle">
-                                    <font-awesome-icon icon="fa-solid fa-location-dot" />
-                                </span>
-                                {{ listItem.subTitle }}
-                            </p>
+                            <div>
+                                <h3 class="text-uppercase">{{ listItem.name }}</h3>
+                                <p class="color-orange">
+                                    <span v-if="mainContent.surTitle">
+                                        <font-awesome-icon icon="fa-solid fa-location-dot" />
+                                    </span>
+                                    {{ listItem.subTitle }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-        <div v-if="imgSide === 'right'" class="w-50">
-            <img :src="bgImg" :alt="bgImg" class="bg-img">
-            <figure v-if="hasLogo">
-                <img :src="logoImg" alt="Don Peppe" class="img-fluid">
-            </figure>
-        </div>
-    </section>
+            <div v-if="imgSide === 'right'" class="w-50">
+                <img :src="bgImg" :alt="bgImg" class="bg-img">
+                <figure v-if="hasLogo">
+                    <img :src="logoImg" alt="Don Peppe" class="img-fluid">
+                </figure>
+            </div>
+        </section>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -144,5 +152,21 @@ section {
 
         margin: 20px 0;
     }
+
+}
+
+.icon {
+    top: 0;
+    right: 0;
+
+    background-color: white;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 5px 0 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

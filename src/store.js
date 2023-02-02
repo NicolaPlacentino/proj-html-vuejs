@@ -218,6 +218,6 @@ export const store = reactive({
     },
     icons: {
         swirl: '/src/assets/svg/svg-7.svg',
-        cart: '/scr/assets/svg/svg-9.svg'
+        cart: '/src/assets/svg/svg-9.svg'
     }
 })

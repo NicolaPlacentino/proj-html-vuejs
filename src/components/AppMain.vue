@@ -93,7 +93,7 @@ export default {
 
     <!-- deals section -->
     <BaseInfoSection :main-content="this.dealSection" :img-side="'right'" :bg-img="store.sideImages.dealsImage"
-        :has-pattern="true" :has-separator="true"></BaseInfoSection>
+        :has-pattern="true" :has-separator="true" :has-icon="true"></BaseInfoSection>
 
     <BookingForm></BookingForm>
 </template>
