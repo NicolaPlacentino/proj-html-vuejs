@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 // importare icone di fontawesome
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -21,7 +22,8 @@ library.add(
     faInstagram,
     faTwitter,
     faFacebookF,
-    faLinkedinIn
+    faLinkedinIn,
+    faHeart
 )
 
 const app = createApp(App)

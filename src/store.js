@@ -163,8 +163,8 @@ export const store = reactive({
     },
     footerData: {
         footerImage: '/src/assets/img/footer-img-1.jpg',
-        sealOfQuality: '/src/assets/img/footer-bottom-img-png',
-        slogan: 'The Don Peppe crew first and foremost values an authentic, well baked slice of pizza',
+        sealOfQuality: '/src/assets/img/footer-bottom-img.png',
+        slogan: 'The Don Peppe crew first and foremost values an authentic, well baked slice of pizza.',
         restaurants: {
             title: 'Find our restaurants',
             info: [
