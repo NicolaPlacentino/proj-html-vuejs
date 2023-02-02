@@ -1,6 +1,6 @@
 <script>
 import { store } from '../store';
-import OrderingForm from './OrderingForm.vue';
+import BookingForm from './BookingForm.vue';
 import BaseCarousel from './BaseCarousel.vue';
 import BaseInfoSection from './BaseInfoSection.vue';
 import BasePictureGallery from './BasePictureGallery.vue';
@@ -57,7 +57,7 @@ export default {
             buildYourPizzaBg: '/src/assets/img/h3-background-img.jpg'
         }
     },
-    components: { BaseCarousel, OrderingForm, BaseInfoSection, BasePictureGallery, Clients, BaseMenu }
+    components: { BaseCarousel, BookingForm, BaseInfoSection, BasePictureGallery, Clients, BaseMenu }
 }
 </script>
 
@@ -95,7 +95,7 @@ export default {
     <BaseInfoSection :main-content="this.dealSection" :img-side="'right'" :bg-img="store.sideImages.dealsImage"
         :has-pattern="true" :has-separator="true"></BaseInfoSection>
 
-    <OrderingForm></OrderingForm>
+    <BookingForm></BookingForm>
 </template>
 
 <style lang="scss" scoped>
