@@ -163,7 +163,7 @@ section {
     width: 30px;
     height: 30px;
 
-    border-radius: 5px 0 0 0;
+    border-radius: 0 0 0 5px;
 
     display: flex;
     justify-content: center;
