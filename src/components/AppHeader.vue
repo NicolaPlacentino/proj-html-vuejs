@@ -69,7 +69,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg">
+    <div class="bg" id="header">
         <div class="container">
             <nav class="p-4 d-flex">
                 <BaseButton @button-clicked="order" :text="this.buttonText"></BaseButton>
