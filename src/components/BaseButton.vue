@@ -20,7 +20,8 @@ export default {
 @use '../assets/scss/variables' as *;
 
 button {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
     color: white;
     background-color: $my-orange;
 
