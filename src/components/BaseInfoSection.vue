@@ -72,12 +72,14 @@ export default {
 @use '../assets/scss/variables' as *;
 
 section {
-    height: 600px;
+    height: 650px;
     overflow-y: hidden;
 
     .bg-img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
+        object-position: center;
     }
 
     .position-absolute {
