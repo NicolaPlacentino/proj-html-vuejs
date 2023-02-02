@@ -117,6 +117,10 @@ figure:hover .hover-info {
         justify-content: center;
         align-items: center;
 
+        span {
+            font-family: sans-serif;
+        }
+
         .social {
             justify-content: center;
             align-items: center;

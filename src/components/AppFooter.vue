@@ -13,6 +13,7 @@ export default {
 <template>
     <section class="d-flex">
         <div class="w-50 bg-pattern p-5">
+
             <div class="top d-flex">
                 <div class="restaurants">
                     <h4>{{ store.footerData.restaurants.title }}</h4>
@@ -22,6 +23,7 @@ export default {
                         </li>
                     </ul>
                 </div>
+
                 <div class="working-hours">
                     <h4>{{ store.footerData.workingHours.title }}</h4>
                     <ul v-for="list in store.footerData.workingHours.info">
@@ -31,12 +33,14 @@ export default {
                         </li>
                     </ul>
                 </div>
+
                 <div class="slogan">
                     <h3 class="text-white">
                         {{ store.footerData.slogan }}
                     </h3>
                 </div>
             </div>
+
             <div class="social d-flex">
                 <span>Follow Us:</span>
                 <a href="#">
@@ -52,12 +56,14 @@ export default {
                     <font-awesome-icon icon="fa-brands fa-linkedin-in" />
                 </a>
             </div>
+
             <div class="bottom d-flex">
                 <div>Made with <font-awesome-icon icon="fa-regular fa-heart" /> by <span>Nicola</span></div>
                 <figure class="m-0">
                     <img :src="store.footerData.sealOfQuality" :alt="store.footerData.sealOfQuality">
                 </figure>
             </div>
+
         </div>
         <div class="w-50">
             <img :src="store.footerData.footerImage" :alt="store.footerData.footerImage" class="bg-img">
@@ -98,6 +104,10 @@ section {
                 font-size: 20px;
             }
         }
+
+        li {
+            font-family: sans-serif;
+        }
     }
 
     .social {
@@ -132,9 +142,19 @@ section {
         justify-content: space-between;
         align-items: flex-end;
 
+        div {
+            font-family: sans-serif;
+        }
+
         span {
             color: $my-green;
         }
+    }
+
+    h3,
+    h4,
+    h5 {
+        font-family: $font;
     }
 
     h4,

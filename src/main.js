@@ -10,6 +10,7 @@ import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import "@fontsource/open-sans-condensed/700.css"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './store'
 import App from './App.vue'

@@ -28,23 +28,33 @@ export default {
         </div>
 
         <section class="d-flex">
+
+            <!-- image left -->
             <div v-if="imgSide === 'left'" class="w-50 position-relative">
                 <img :src="bgImg" :alt="bgImg" class="bg-img img-fluid">
                 <figure v-if="hasLogo" class="position-absolute m-0">
                     <img :src="logoImg" alt="Don Peppe" class="img-fluid">
                 </figure>
             </div>
+
             <div class="w-50" :class="{ 'bg-pattern': hasPattern }">
                 <div class="w-75 mx-auto mt-5">
+
+                    <!-- title -->
                     <span v-if="mainContent.surTitle" class="text-uppercase surtitle color-orange">{{
                         mainContent.surTitle
                     }}</span>
+
                     <h2 class="text-uppercase">{{ mainContent.title }}</h2>
+
                     <span v-if="mainContent.subTitle" class="subtitle">{{ mainContent.subTitle }}</span>
+
 
                     <div v-for="listItem in mainContent.listItems">
                         <div v-if="hasSeparator" class="separator"></div>
                         <div class="d-flex">
+
+                            <!-- date / price -->
                             <div class="me-4">
                                 <div v-if="listItem.date" class="d-inline text-uppercase">
                                     <span class="d-block day color-orange">{{ listItem.date[0] }}</span>
@@ -52,9 +62,10 @@ export default {
                                 </div>
                                 <span v-else class="price">{{ listItem.price }}</span>
                             </div>
+
                             <div>
                                 <h3 class="text-uppercase">{{ listItem.name }}</h3>
-                                <p class="color-orange">
+                                <p class="color-orange item-subtitle">
                                     <span v-if="mainContent.surTitle">
                                         <font-awesome-icon icon="fa-solid fa-location-dot" />
                                     </span>
@@ -66,6 +77,8 @@ export default {
 
                 </div>
             </div>
+
+            <!-- iamge right -->
             <div v-if="imgSide === 'right'" class="w-50">
                 <img :src="bgImg" :alt="bgImg" class="bg-img">
                 <figure v-if="hasLogo">
@@ -113,6 +126,8 @@ section {
         color: gray;
         font-size: 15px;
         margin-bottom: 20px;
+
+        font-family: sans-serif;
     }
 
     .price {
@@ -151,6 +166,10 @@ section {
         border-bottom: 2px dotted $my-gold-l;
 
         margin: 20px 0;
+    }
+
+    .item-subtitle {
+        font-family: sans-serif;
     }
 
 }

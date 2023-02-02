@@ -61,12 +61,15 @@ export default {
         input {
             padding: 10px;
             border: 1.5px solid black;
+
+            font-family: sans-serif;
         }
     }
 
     span {
         color: white;
         font-size: 12px;
+        font-family: sans-serif;
     }
 }
 </style>

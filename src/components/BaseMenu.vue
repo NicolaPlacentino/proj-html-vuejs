@@ -19,12 +19,15 @@ export default {
 </script>
 
 <template>
+
     <div class="menu-body position-relative">
         <div class="menu-info text-center p-5 pb-0">
             <span class="surtitle">{{ menuContent.surtitle }}</span>
             <h2>{{ menuContent.title }}</h2>
             <p>{{ menuContent.description }}</p>
         </div>
+
+        <!-- product section -->
         <div class="menu-products p-5 d-flex text-uppercase">
             <div v-for="product in menuContent.products" class="product-card text-center">
                 <figure class="position-relative" @click="sellPizza(product)">
@@ -68,6 +71,7 @@ export default {
         p {
             color: gray;
             font-size: 15px;
+            font-family: sans-serif;
         }
     }
 

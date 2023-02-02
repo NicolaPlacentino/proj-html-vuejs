@@ -1,3 +1,4 @@
+@use '/src/assets/scss/variables' as*;
 /* reset */
 
 * {
@@ -8,6 +9,8 @@
 
 /* general */
 
-
+* {
+    font-family: $font;
+}
 
 /* utils */
