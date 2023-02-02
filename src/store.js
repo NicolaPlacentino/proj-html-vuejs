@@ -18,7 +18,7 @@ export const store = reactive({
     carouselTestimonials: [
         {
             backgroundImg: '/src/assets/img/h3-testimonials-bckgrnd.jpg',
-            text: '"Forget the trendy pizza shops, this hidden spot makes the best New York style pizza slice in Neaples"',
+            text: '"Forget the trendy pizza shops, this hidden spot makes the best New York style pizza slice in Naples"',
             testimonial: 'Washington Post 2018'
         },
         {
@@ -160,5 +160,60 @@ export const store = reactive({
         guestsNumber: '',
         bookedDate: '',
         bookedTime: ''
+    },
+    footerData: {
+        footerImage: '/src/assets/img/footer-img-1.jpg',
+        sealOfQuality: '/src/assets/img/footer-bottom-img-png',
+        slogan: 'The Don Peppe crew first and foremost values an authentic, well baked slice of pizza',
+        restaurants: {
+            title: 'Find our restaurants',
+            info: [
+                {
+                    street: '1614 E. Bell Rd #104.',
+                    city: 'Salerno, AZ 85022',
+                    phone: '(602) 867-1010'
+                },
+                {
+                    street: '200 E. Oiazzetta Tommaso',
+                    city: 'Sorrento, AZ 85022',
+                    phone: '(358) 867-1010'
+                },
+                {
+                    street: 'Vale Puglia 54',
+                    city: 'Torre Del Greco, AZ 85022',
+                    phone: '(359) 867-1010'
+                },
+                {
+                    street: 'Corso Itali AA',
+                    city: 'Naples, AZ 85022',
+                    phone: '(989) 867-1010'
+                },
+            ]
+        },
+        workingHours: {
+            title: 'Working hours',
+            info: [
+                {
+                    day: 'Monday',
+                    hours: 'Kitchen Closed',
+                    closed: true
+                },
+                {
+                    day: 'Tuesday untill Friday',
+                    hours: '9:00 - 22:00',
+                    closed: false
+                },
+                {
+                    day: 'Saturday',
+                    hours: '11am to midnight',
+                    closed: false
+                },
+                {
+                    day: 'Sunday',
+                    hours: '9:00 - 22:00',
+                    closed: false
+                },
+            ]
+        }
     }
 })
