@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <div class="menu-body">
+    <div class="menu-body position-relative">
         <div class="menu-info text-center p-5 pb-0">
             <span class="surtitle">{{ menuContent.surtitle }}</span>
             <h2>{{ menuContent.title }}</h2>
@@ -41,6 +41,9 @@ export default {
                 </div>
             </div>
         </div>
+        <div v-if="store.icons.swirl" class="icon position-absolute">
+            <img :src="store.icons.swirl" class="w-75">
+        </div>
     </div>
 </template>
 
@@ -48,7 +51,7 @@ export default {
 @use '../assets/scss/variables' as*;
 
 .menu-body {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 
     .menu-info {
         .surtitle {
@@ -118,6 +121,21 @@ export default {
                 }
             }
         }
+    }
+
+    .icon {
+        bottom: 0;
+        right: 0;
+
+        background-color: $my-magenta;
+        width: 30px;
+        height: 30px;
+
+        border-radius: 5px 0 0 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 </style>
