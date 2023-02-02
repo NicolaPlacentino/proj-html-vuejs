@@ -155,5 +155,10 @@ export const store = reactive({
                 sold: false
             },
         ]
+    },
+    userBooking: {
+        guestsNumber: '',
+        bookedDate: '',
+        bookedTime: ''
     }
 })
