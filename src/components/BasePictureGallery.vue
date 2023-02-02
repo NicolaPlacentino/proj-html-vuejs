@@ -33,9 +33,15 @@ export default {
                         <h3>{{ item.mainInfo }}</h3>
                         <span>{{ item.secondaryInfo }}</span>
                         <div v-if="social" class="d-flex social">
-                            <font-awesome-icon icon="fa-brands fa-instagram" />
-                            <font-awesome-icon icon="fa-brands fa-twitter" />
-                            <font-awesome-icon icon="fa-brands fa-facebook-f" />
+                            <a href="#">
+                                <font-awesome-icon icon="fa-brands fa-instagram" />
+                            </a>
+                            <a href="#">
+                                <font-awesome-icon icon="fa-brands fa-twitter" />
+                            </a>
+                            <a href="#">
+                                <font-awesome-icon icon="fa-brands fa-facebook-f" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -81,6 +87,11 @@ figure:hover .hover-info {
             transform: translate(-50%, -50%);
 
             color: white;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 }

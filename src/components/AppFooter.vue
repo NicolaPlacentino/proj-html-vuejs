@@ -39,10 +39,18 @@ export default {
             </div>
             <div class="social d-flex">
                 <span>Follow Us:</span>
-                <font-awesome-icon icon="fa-brands fa-twitter" />
-                <font-awesome-icon icon="fa-brands fa-facebook-f" />
-                <font-awesome-icon icon="fa-brands fa-instagram" />
-                <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+                <a href="#">
+                    <font-awesome-icon icon="fa-brands fa-twitter" />
+                </a>
+                <a href="#">
+                    <font-awesome-icon icon="fa-brands fa-facebook-f" />
+                </a>
+                <a href="#">
+                    <font-awesome-icon icon="fa-brands fa-instagram" />
+                </a>
+                <a href="#">
+                    <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+                </a>
             </div>
             <div class="bottom d-flex">
                 <div>Made with <font-awesome-icon icon="fa-regular fa-heart" /> by <span>Nicola</span></div>
@@ -103,6 +111,11 @@ section {
             text-transform: uppercase;
             color: $my-gold-l;
             font-weight: bold;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
         }
 
         * {
